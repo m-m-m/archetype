@@ -1,0 +1,35 @@
+image:https://m-m-m.github.io/logo.svg[logo,width="150",link="https://m-m-m.github.io"]
+
+image:https://img.shields.io/github/license/m-m-m/archetype.svg?label=License["Apache License, Version 2.0",link=https://github.com/m-m-m/archetype/blob/master/LICENSE]
+image:https://travis-ci.com/m-m-m/archetype.svg?branch=master["build-status",link="https://travis-ci.com/m-m-m/archetype"]
+
+= mmm-archetype
+
+image:https://img.shields.io/maven-central/v/io.github.m-m-m/mmm-archetype.svg?label=Maven%20Central["Maven Central",link=https://search.maven.org/search?q=g:io.github.m-m-m]
+image:https://javadoc.io/badge2/io.github.m-m-m/mmm-archetype/javadoc.svg["base JavaDoc", link=https://javadoc.io/doc/io.github.m-m-m/mmm-archetype]
+
+The project `mmm-archetype`) provides an application template to create new apps based on this `mmm` framework as maven archetype.
+
+== Features
+
+This archetype creates a new app with the following structure:
+
+* `shared` - this is for your code that is shared between `server` and `client`. It contains your data-model with custom properties, validators, etc.
+* `client` - your clients per technology
+** `core` - your actual client code with controllers, views, etc.
+** `fx` - dependencies and main class to build your portable client from `core` as JavaFx desktop app
+** `tvm` - dependencies and main class to build your portal client from `core` as web app using TeaVM
+** `android` - dependencies, manifest, main class, etc. to build your portable client from `core` as mobile app using android
+* `server` - your server (backend)
+** `core` - your actual server code with services, data-access, etc.
+** `main` - your server bundled as regular Java app
+** `native` - your server compiled as native binary using GraalVM and packaged as container
+
+== Usage
+
+Maven usage:
+```
+mvn -DarchetypeVersion=1.0.0 -DarchetypeGroupId=io.github.m-m-m -DarchetypeArtifactId=mmm-archetype archetype:generate -DgroupId=com.example.application -DartifactId=demo -Dversion=1.0.0-SNAPSHOT -Dpackage=com.example.application.demo
+```
+
+For `archetypeVersion` please see `Maven central` badge to pick the proper latest version.
