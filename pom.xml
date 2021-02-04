@@ -17,6 +17,7 @@
   <properties>
     <mmm.repository>archetype</mmm.repository>
     <mmm.version>0.2.0-SNAPSHOT</mmm.version>
+    <teavm.version>0.7.0-SNAPSHOT</teavm.version>
   </properties>
 
   <build>

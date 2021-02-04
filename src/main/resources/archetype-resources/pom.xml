@@ -40,6 +40,13 @@
       </dependency>
       <dependency>
         <groupId>io.github.m-m-m</groupId>
+        <artifactId>mmm-ui-test-parent</artifactId>
+        <version>${mmm.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>io.github.m-m-m</groupId>
         <artifactId>mmm-rpc-parent</artifactId>
         <version>${mmm.version}</version>
         <type>pom</type>
@@ -282,9 +289,9 @@
           </configuration>
         </plugin>
         <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>servicedocgen-maven-plugin</artifactId>
-          <version>$[mojo.servicedocgen.plugin.version]</version>
+          <groupId>org.teavm</groupId>
+          <artifactId>teavm-maven-plugin</artifactId>
+          <version>$[teavm.version]</version>
         </plugin>
         <plugin>
           <groupId>org.sonarsource.scanner.maven</groupId>
