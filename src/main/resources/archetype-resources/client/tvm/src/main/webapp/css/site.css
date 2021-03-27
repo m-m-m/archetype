@@ -5,8 +5,12 @@ body {
   font-family: var(--font);
   background: var(--col-bg);
 }
-:not(input):not(textarea):not(select) {
-  color: var(--col-text);
+a {
+  color: var(--col-link);
+  cursor: pointer;
+}
+a:hover {
+  color: var(--col-hover);
 }
 button,
 input,
@@ -186,7 +190,7 @@ ui-slider>output {
   padding-right: 0.5em;
 }
 ui-tabs {
-	display: inline-flex;
+  display: inline-flex;
 }
 ui-tabs>button {
   padding: 0.2em;
@@ -213,6 +217,7 @@ ui-tabpanel>ui-tabcontent {
 }
 ui-content {
   white-space: nowrap;
+  display: table;
 }
 ui-content>* {
   display: inline-block;
@@ -221,9 +226,11 @@ ui-content>* {
 }
 ui-content>aside {
   margin-right: 1em;
+  display: table-cell;
 }
 ui-content>main {
-  width: 89.0%;
+  display: table-cell;
+  width: 100%;
 }
 table.ui-data {
   width: 100%;
