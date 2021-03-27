@@ -9,14 +9,15 @@
     <relativePath>../parent/pom.xml</relativePath>
   </parent>
   <artifactId>mmm-archetype</artifactId>
-  <version>${revision}${changelist}</version>
+  <version>${revision}</version>
   <packaging>maven-archetype</packaging>
   <name>${project.artifactId}</name>
   <description>Application template to create new apps based on mmm framework.</description>
 
   <properties>
     <mmm.repository>archetype</mmm.repository>
-    <mmm.version>0.2.0-SNAPSHOT</mmm.version>
+    <revision>0-SNAPSHOT</revision>
+    <mmm.version>${project.version}</mmm.version>
     <teavm.version>0.7.0-SNAPSHOT</teavm.version>
   </properties>
 
